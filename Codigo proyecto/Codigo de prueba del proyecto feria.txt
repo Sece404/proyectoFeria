@@ -1,0 +1,31 @@
+// Codigo sujeto a varios cambios y falta contenido, falta que avanze, gire a los 2 lados, y retroceda, la aplicacion para controlarlo desde el telefono se llama arduino car
+
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(10, 11); // TX, RX
+
+const int IN1 = 2;  
+const int IN2 = 3;  
+const int IN3 = 5;  
+const int IN4 = 6; 
+
+unsigned long lapso;
+
+void setup() {
+  Serial.begin(9600);
+  mySerial.begin(9600);
+
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+
+ 
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+}
+
+
+    
